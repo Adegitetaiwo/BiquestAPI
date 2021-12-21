@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
@@ -146,6 +147,9 @@ STATIC_URL = '/static/'
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 sentry_sdk.init(
     dsn="https://a3637ca701364e91ab77c7870ea33503@o420940.ingest.sentry.io/6115675",
