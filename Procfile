@@ -1,1 +1,1 @@
-web: gunicorn bibleQuize.wsgi —-log-file -
+web: gunicorn bibleQuizeAPI.wsgi —-log-file -
