@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2185#=c8%et2(=gq2(m$hl&^bh6fjp3$s9n3g)w1o1dqpgnu@x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'biquest.herokuapp.com',
@@ -95,13 +95,13 @@ WSGI_APPLICATION = 'bibleQuizeAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bible_quiz_api',
         'HOST' : 'localhost',
         'USER' : 'taiwo',
-        'PASSWORD' : "ADE1234567890+",
-        'PORT' : '3305'
+        'PASSWORD' : "",
+        'PORT' : '3306'
     }
 }
 
