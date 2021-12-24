@@ -96,13 +96,13 @@ WSGI_APPLICATION = 'bibleQuizeAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'ENGINE': 'django.db.backends.mysql',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bible_quiz_api',
         'HOST' : 'localhost',
         'USER' : 'taiwo',
         'PASSWORD' : "ADE1234567890+",
-        'PORT' : '3306'
+        'PORT' : '3305'
     }
 }
 
