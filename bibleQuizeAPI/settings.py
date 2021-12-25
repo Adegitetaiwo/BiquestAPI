@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2185#=c8%et2(=gq2(m$hl&^bh6fjp3$s9n3g)w1o1dqpgnu@x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'biquest.herokuapp.com',

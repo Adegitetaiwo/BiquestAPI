@@ -37,9 +37,17 @@ def quiz_questions(request):
         except Exception as e:
             # if the user send a wrong value, API return 10 questions by default
             # # random_ids = random.sample(get_all_ids, k=10)
-            return Response({
-                'queryset': {
-                    "message": "Random sample size is greater than size of questions in database. If you have an admin previlege or permission, please add more question, at least > 10."
+            try:
+                if num_random:
+                    return Response({
+                        'queryset': {
+                            "message": f"Random query size is greater than the size or number of questions in database. If you have an admin previlege or permission, please add more questions, at least > {num_random}, or try again later."
+                        }
+                    }, status=status.HTTP_400_BAD_REQUEST)
+            except Exception as e:
+                return Response({
+                    'queryset': {
+                        "message": "Random query size is greater than the size or number of questions in database. If you have an admin previlege or permission, please add more questions, at least > 10, or try again later."
                     }
                 }, status=status.HTTP_400_BAD_REQUEST)
     
